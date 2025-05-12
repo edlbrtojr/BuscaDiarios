@@ -29,7 +29,7 @@ chrome_options.add_experimental_option("prefs", prefs)
 
 def Diario_Estado_Acre():
     url_do_site = 'https://diario.ac.gov.br/'
-    local_de_download = r'C:\Users\edlbr\OneDrive\Área de Trabalho\Diários\AC\Diários Oficiais do Estado'
+    local_de_download = r'.\Downloads\Diários\AC\Diários Oficiais do Estado'
     prefs.update({"download.default_directory": local_de_download})
 
     def download_DOE_AC():
@@ -64,7 +64,7 @@ def Diario_Estado_Acre():
 
 def Diario_TJ_AC():
     url_do_site = 'https://diario.tjac.jus.br/edicoes.php'
-    local_de_download = r'C:\Users\edlbr\OneDrive\Área de Trabalho\Diários\AC\Diários do Tribunal de Justiça'
+    local_de_download = r'.\Downloads\Diários\AC\Diários do Tribunal de Justiça'
     prefs.update({"download.default_directory": local_de_download})
 
     def download_TJ_AC():
