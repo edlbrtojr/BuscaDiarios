@@ -1,48 +1,86 @@
 # Busca Diários
 
-Este script automatiza o download e a busca por termos específicos em Diários Oficiais de fontes selecionadas. Atualmente, ele baixa os Diários Oficiais do Estado do Acre (DOE-AC) e do Tribunal de Justiça do Acre (DTJ-AC), renomeia os arquivos PDF baixados com a data atual e, em seguida, procura por uma lista pré-definida de termos nesses PDFs.
+Aplicação para baixar automaticamente e pesquisar termos nos Diários Oficiais do Estado do Acre e Diários do Tribunal de Justiça do Acre.
 
 ## Funcionalidades
 
-- Baixa a edição mais recente do Diário Oficial do Estado do Acre.
-- Baixa a edição mais recente do Diário do Tribunal de Justiça do Acre.
-- Renomeia os arquivos PDF baixados com um formato padronizado (`DOE-AC - Diário Oficial do Estado do Acre - DD-MM-AAAA.pdf` e `DTJ-AC - Diário do Tribunal de Justiça do Estado do Acre - DD-MM-AAAA.pdf`).
-- Busca por uma lista de termos (definida na variável `infos_buscadas`) dentro dos PDFs baixados.
-- Imprime no console os resultados da busca, indicando o arquivo, a página, o termo encontrado e o número de ocorrências.
+- Download automático dos diários oficiais diretamente dos sites oficiais
+- Renomeação dos arquivos com data formatada
+- Busca de termos específicos nos PDFs baixados
+- Interface gráfica amigável para configuração e visualização dos resultados
+
+## Requisitos
+
+- Python 3.7 ou superior
+- Bibliotecas Python (instaláveis via requirements.txt)
+- Navegador Chrome instalado (usado pelo Selenium)
+
+## Instalação
+
+1. Clone ou baixe este repositório
+2. Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Como Usar
 
-### Pré-requisitos
+### Iniciando a Aplicação
 
-- Python 3.x instalado.
-- Google Chrome instalado.
-- ChromeDriver compatível com a sua versão do Google Chrome. Certifique-se de que o `chromedriver` esteja no seu PATH do sistema ou especifique o caminho para ele no script.
+Você pode iniciar a aplicação usando o script `start.py`:
 
-### Instalação
+```bash
+python start.py
+```
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone <url-do-repositorio>
-    cd BuscaDiarios
-    ```
-2.  **Instale as dependências:**
-    ```bash
-    pip install selenium pdfplumber
-    ```
-3.  **Configure o Script:**
-    - Abra o arquivo `main.py`.
-    - **(Importante)** Atualize os caminhos em `local_de_download` dentro das funções `Diario_Estado_Acre` e `Diario_TJ_AC` para os diretórios onde você deseja salvar os PDFs baixados. Os diretórios precisam existir antes de executar o script.
-    - Modifique a lista `infos_buscadas` com os termos que você deseja procurar nos PDFs.
+Este comando iniciará a interface gráfica por padrão.
 
-### Execução
+### Opções de Linha de Comando
 
-Execute o script a partir do terminal:
+Você também pode usar a aplicação em modo linha de comando com diferentes opções:
+
+```bash
+python start.py --cli                         # Executa no modo CLI
+python start.py --cli --terms termo1 termo2   # Busca termos específicos
+```
+
+### Modo GUI
+
+Para usar apenas a interface gráfica:
+
+```bash
+python gui.py
+```
+
+Na interface você pode:
+
+- Configurar a pasta de downloads
+- Editar os termos de busca
+- Selecionar quais diários baixar
+- Iniciar a busca e visualizar os resultados
+
+### Modo CLI
+
+Para usar apenas o modo linha de comando:
 
 ```bash
 python main.py
 ```
 
-O script irá baixar os PDFs, renomeá-los e realizar a busca. Os resultados serão exibidos no console.
+## Personalização
+
+Você pode editar os termos de busca diretamente no arquivo `main.py` ou usando a interface gráfica.
+
+## Solução de Problemas
+
+- Se os downloads não funcionarem, verifique sua conexão com a internet
+- Em caso de erros com o Selenium, certifique-se de que o Chrome está instalado e atualizado
+- Problemas com PDFs não encontrados podem ocorrer se o download falhar ou se o site mudar sua estrutura
+
+## Licença
+
+Este software é de uso livre.
 
 ---
 
