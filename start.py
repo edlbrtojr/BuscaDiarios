@@ -24,10 +24,25 @@ def main():
     else:
         # Modo gráfico
         import gui
+        import tkinter as tk
+        
+        def center_window(window, width=900, height=700):
+            # Get screen dimensions
+            screen_width = window.winfo_screenwidth()
+            screen_height = window.winfo_screenheight()
+            
+            # Calculate position coordinates
+            x = (screen_width - width) // 2
+            y = (screen_height - height) // 2
+            
+            # Set the window position
+            window.geometry(f"{width}x{height}+{x}+{y}")
+            
         if __name__ == "__main__":
-            gui.root = gui.tk.Tk()
-            gui.app = gui.DiariosBuscaApp(gui.root)
-            gui.root.mainloop()
+            root = tk.Tk()
+            app = gui.DiariosBuscaApp(root)
+            center_window(root)
+            root.mainloop()
 
 if __name__ == "__main__":
     main() 

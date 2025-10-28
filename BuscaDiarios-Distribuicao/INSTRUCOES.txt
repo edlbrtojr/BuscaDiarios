@@ -1,0 +1,25 @@
+BUSCA DIÁRIOS - INSTRUÇÕES RÁPIDAS
+
+1. INSTALAÇÃO
+   - Extraia esta pasta para o local desejado (ex: C:\Programas\BuscaDiarios)
+   - Execute BuscaDiarios.exe para iniciar o programa
+   - (Opcional) Execute install_startup.bat para iniciar automaticamente com o Windows
+
+2. REQUISITOS
+   - Windows 7 ou superior
+   - Google Chrome instalado
+
+3. COMO USAR
+   - Execute BuscaDiarios.exe
+   - Configure os termos de busca na interface
+   - Clique em "Iniciar Busca"
+   - Os PDFs serão baixados na pasta Downloads
+
+4. SUPORTE
+   - Consulte o arquivo Leia-me.txt para mais informações
+   - Em caso de problemas, certifique-se de que o Chrome está instalado
+
+5. EXECUÇÃO AUTOMÁTICA
+   - Execute install_startup.bat para configurar a inicialização automática
+   - O programa iniciará minimizado quando o Windows iniciar
+   - Para desativar, remova o atalho da pasta Startup do Windows
