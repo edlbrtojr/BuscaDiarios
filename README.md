@@ -1,6 +1,8 @@
 # Busca Diários
 
-Aplicação para baixar automaticamente e pesquisar termos nos Diários Oficiais do Estado do Acre e Diários do Tribunal de Justiça do Acre.
+Após ser aprovado no cadastro reserva do concurso do Tribunal de Justiça do Acre, criei este script para rodar diariamente e verificar se meu nome apareceu em alguns dos diários, pois tinha medo de ser convocado e não receber nenhum tipo de e-mail.
+
+Utilizando deste medo e dos meus conhecimentos em python, desenvolvi a aplicação para baixar automaticamente e pesquisar termos, como meu nome,  nos Diários Oficiais do Estado do Acre e Diários do Tribunal de Justiça do Acre.
 
 ## Funcionalidades
 
